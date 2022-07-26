@@ -4,22 +4,28 @@ body {
   box-sizing: border-box;
 }
 
-li{
+li {
   list-style: none;
 }
 
-.p-1-lg{
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.p-1-lg {
   padding: 1rem;
 }
 
 .d-flex-lg {
   display: flex;
 }
-.justify-between-lg{
+
+.justify-between-lg {
   justify-content: space-between;
 }
 
-.grow-1-lg{
+.grow-1-lg {
   flex-grow: 1;
 }
 
