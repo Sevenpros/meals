@@ -21,6 +21,10 @@ footer {
   display: flex;
 }
 
+.justify-center-lg {
+  justify-content: center;
+}
+
 .justify-between-lg {
   justify-content: space-between;
 }
@@ -29,4 +33,60 @@ footer {
   flex-grow: 1;
 }
 
+.grid-lg {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
 
+.description-item {
+  border: 1px solid rgba(68, 68, 68, 0.33);
+  display: flex;
+  align-content: center;
+  margin: 1rem;
+}
+
+form {
+  display: inline-block;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.form-group {
+  margin: 1rem auto;
+}
+
+.flex-column-lg {
+  flex-direction: column;
+}
+
+/*.form{*/
+/*  align-content: stretch;*/
+/*}*/
+
+#details-popup {
+  width: 90%;
+  height: 98vh;
+  margin: auto;
+  border: 1px solid #000;
+  text-align: center;
+  z-index: 1000;
+  position: relative;
+}
+
+.comment > * {
+  padding: 0 1rem;
+}
+
+.food-container,
+.comments,
+.form {
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.food-image {
+  height: 400px;
+  background-color: black;
+}
