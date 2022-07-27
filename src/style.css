@@ -1,4 +1,32 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+li {
+  list-style: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.p-1-lg {
+  padding: 1rem;
+}
+
+.d-flex-lg {
+  display: flex;
+}
+
+.justify-between-lg {
+  justify-content: space-between;
+}
+
+.grow-1-lg {
+  flex-grow: 1;
+}
+
+
