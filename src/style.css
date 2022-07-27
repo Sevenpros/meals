@@ -17,16 +17,19 @@ img {
   width: 100%;
 }
 
-.p-1-lg {
-  padding: 1rem;
+a {
+  text-decoration: none;
 }
 
 .d-flex-lg {
   display: flex;
+  gap: 1em;
 }
 
 .justify-between-lg {
   justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
 }
 
 .grow-1-lg {
@@ -44,4 +47,15 @@ img {
 .meal-card {
   width: 200px;
   flex-grow: 0;
+}
+
+.meal-desc {
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.meal-likes {
+  display: flex;
+  gap: 0.3vw;
 }
