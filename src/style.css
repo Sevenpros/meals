@@ -14,7 +14,7 @@ footer {
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .p-1-lg {
@@ -34,14 +34,14 @@ img {
 }
 
 .meals-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 32px 24px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 32px 24px;
 }
 
 .meal-card {
-    width: 200px;
-    flex-grow: 0;
+  width: 200px;
+  flex-grow: 0;
 }
