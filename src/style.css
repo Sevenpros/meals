@@ -13,6 +13,10 @@ footer {
   bottom: 0;
 }
 
+img {
+  width: 100%;
+}
+
 .p-1-lg {
   padding: 1rem;
 }
@@ -29,4 +33,15 @@ footer {
   flex-grow: 1;
 }
 
+.meals-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 32px 24px;
+}
 
+.meal-card {
+  width: 200px;
+  flex-grow: 0;
+}
