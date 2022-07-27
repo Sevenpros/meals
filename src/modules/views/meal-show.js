@@ -1,5 +1,6 @@
 import { areaBox, categoryBox, foodImageBox, foodNameBox, ingredientListBox, tagListBox } from '../dom-elements.js';
 import { getMeal } from '../meals/show';
+import { setText } from '../global-value';
 
 const displayIngredients = (meal) => {
   let index = 1;
@@ -11,8 +12,6 @@ const displayIngredients = (meal) => {
     }
   }
 };
-
-const setText = (element, value) => element.innerHTML = value;
 const setImage = (element, value, altText) => element.innerHTML = `<img src='${value}' class="meal-image" alt="${altText}">`;
 const displayData = (meal) => {
   setImage(foodImageBox, meal.strMealThumb, meal.strMeal);

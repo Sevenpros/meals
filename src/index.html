@@ -38,10 +38,10 @@
                         <div class="item-text">Area</div>
                         <div class="item-text area">Area</div>
                     </div>
-<!--                    <div class="description-item">-->
-<!--                        <div class="item-text">Dish Name</div>-->
-<!--                        <div class="item-text dish-name">Dish Name</div>-->
-<!--                    </div>-->
+                    <!--                    <div class="description-item">-->
+                    <!--                        <div class="item-text">Dish Name</div>-->
+                    <!--                        <div class="item-text dish-name">Dish Name</div>-->
+                    <!--                    </div>-->
                     <div class="description-item">
                         <div class="item-text">Ingredients List</div>
                         <div class="item-text ingredient-list"></div>
@@ -55,21 +55,23 @@
         </div>
         <div class="comments">
             <h2>Comments(counts)</h2>
-            <div class="comment d-flex-lg justify-center-lg">
-                <div class="date">date</div>
-                <div class="comment-author">author name</div>
-                <div class="comment-body">
-                    This is my comment
+            <div class="comment-list">
+                <div class="comment d-flex-lg justify-center-lg">
+                    <div class="date">date</div>
+                    <div class="comment-author">author name</div>
+                    <div class="comment-body">
+                        This is my comment
+                    </div>
                 </div>
             </div>
             <form action="#" method="post" class="form d-flex-lg flex-column-lg align-left justify-start">
                 <div class="form-group">
                     <label for="author"></label>
-                    <input type="text" name="author" id="author" placeholder="Name">
+                    <input type="text" name="author" id="author" placeholder="Name" required>
                 </div>
                 <div class="form-group">
                     <label for="insight"></label>
-                    <textarea name="insight" id="insight" rows="3" cols="30" placeholder="Insight"></textarea>
+                    <textarea name="insight" id="insight" rows="3" cols="30" placeholder="Insight" required></textarea>
                 </div>
                 <div class="form-group text-end w-100">
                     <button type="submit">Comment</button>
