@@ -1,4 +1,4 @@
-import { areaBox, categoryBox, foodImageBox, foodNameBox, ingredientListBox, tagListBox } from '../dom-elements';
+import { areaBox, categoryBox, foodImageBox, foodNameBox, ingredientListBox, tagListBox } from '../dom-elements.js';
 import { getMeal } from '../meals/show';
 
 const displayIngredients = (meal) => {
