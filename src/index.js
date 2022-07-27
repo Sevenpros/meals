@@ -7,17 +7,16 @@ const mealsRow = document.querySelector('.meals-row');
 // get all categories to add event listeners
 const categories = document.querySelectorAll('.category');
 
-
 const showLikes = async (id) => {
-    let likes = 0;
-    const mealLikes = await Fetch.getLikes();
-    await mealLikes.forEach((meal) => {
-      if (meal.item_id === id) {
-        likes = meal.likes;
-      }
-    });
-    return likes;
-  };
+  let likes = 0;
+  const mealLikes = await Fetch.getLikes();
+  await mealLikes.forEach((meal) => {
+    if (meal.item_id === id) {
+      likes = meal.likes;
+    }
+  });
+  return likes;
+};
 
 // mapping meal cards on the page
 const mapCard = (meals) => {
@@ -94,8 +93,6 @@ mealsRow.addEventListener('click', (e) => {
     });
   }
 });
-
-
 
 // displaying meals on the page by default
 itemsCounter();
