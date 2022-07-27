@@ -45,10 +45,6 @@ footer {
   margin: 1rem;
 }
 
-form {
-  display: inline-block;
-}
-
 .text-end {
   text-align: end;
 }
@@ -89,4 +85,10 @@ form {
 .food-image {
   height: 400px;
   background-color: black;
+  position: relative;
+}
+
+.meal-image{
+  width: 100%;
+  height: 400px;
 }
