@@ -25,6 +25,10 @@ img {
   display: flex;
 }
 
+.justify-center-lg {
+  justify-content: center;
+}
+
 .justify-between-lg {
   justify-content: space-between;
 }
@@ -44,4 +48,85 @@ img {
 .meal-card {
   width: 200px;
   flex-grow: 0;
+}
+
+.grid-lg {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.description-item {
+  border: 1px solid rgba(68, 68, 68, 0.33);
+  display: flex;
+  align-content: center;
+  margin: 1rem;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.form-group {
+  margin: 1rem auto;
+}
+
+.flex-column-lg {
+  flex-direction: column;
+}
+
+#details-popup {
+  width: 90%;
+  min-height: 98vh;
+  margin: auto;
+  border: 1px solid #000;
+  text-align: center;
+  z-index: 1000;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.comment > * {
+  padding: 0 1rem;
+}
+
+.comments,
+.form {
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.food-image {
+  height: 500px;
+  background-color: black;
+  position: relative;
+}
+
+.meal-image {
+  width: 100%;
+  height: 500px;
+}
+
+.d-none {
+  display: none;
+}
+
+.food-container {
+  position: relative;
+}
+
+.close-btn {
+  padding: 1rem;
+  background-color: #800;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.item-text:nth-child(2) {
+  font-weight: bold;
 }
