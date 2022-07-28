@@ -4,4 +4,3 @@ export const categoryBox = document.querySelector('.category');
 export const areaBox = document.querySelector('.area');
 export const ingredientListBox = document.querySelector('.ingredient-list');
 export const tagListBox = document.querySelector('.tag-list');
-

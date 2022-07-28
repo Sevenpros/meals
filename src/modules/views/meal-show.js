@@ -1,18 +1,22 @@
-import { areaBox, categoryBox, foodImageBox, foodNameBox, ingredientListBox, tagListBox } from '../dom-elements.js';
-import { getMeal } from '../meals/show';
-import { setText } from '../global-value';
+import {
+  areaBox, categoryBox, foodImageBox, foodNameBox, ingredientListBox, tagListBox,
+} from './meal-dom-elements.js';
+import getMeal from '../meals/show.js';
+import { setText } from '../global-value.js';
 
 const displayIngredients = (meal) => {
   let index = 1;
-  for (const props in meal) {
-    if (meal.hasOwnProperty(props) && props.startsWith('strIngredient')) {
-      const measure = meal['strMeasure' + index];
+  Object.keys(meal).forEach((props) => {
+    if (props.startsWith('strIngredient')) {
+      const measure = meal[`strMeasure${index}`];
       ingredientListBox.innerHTML += meal[props] ? `<span>${meal[props]}(${measure})</span>` : '';
       index += 1;
     }
-  }
+  });
 };
-const setImage = (element, value, altText) => element.innerHTML = `<img src='${value}' class="meal-image" alt="${altText}">`;
+const setImage = (element, value, altText) => {
+  element.innerHTML = `<img src='${value}' class="meal-image" alt="${altText}">`;
+};
 const displayData = (meal) => {
   setImage(foodImageBox, meal.strMealThumb, meal.strMeal);
   setText(foodNameBox, meal.strMeal);
@@ -25,7 +29,3 @@ const displayData = (meal) => {
 getMeal().then((meal) => {
   displayData(meal);
 });
-
-
-
-

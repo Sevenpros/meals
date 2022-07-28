@@ -1,4 +1,4 @@
-import { url } from '../global-value';
+import { url } from '../global-value.js';
 
 const comments = async (id) => {
   const response = await fetch(`${url}?item_id=${id}`);

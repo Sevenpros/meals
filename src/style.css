@@ -57,13 +57,9 @@ footer {
   flex-direction: column;
 }
 
-/*.form{*/
-/*  align-content: stretch;*/
-/*}*/
-
 #details-popup {
   width: 90%;
-  height: 98vh;
+  min-height: 98vh;
   margin: auto;
   border: 1px solid #000;
   text-align: center;
@@ -88,7 +84,7 @@ footer {
   position: relative;
 }
 
-.meal-image{
+.meal-image {
   width: 100%;
   height: 400px;
 }
