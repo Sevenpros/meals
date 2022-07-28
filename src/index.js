@@ -1,7 +1,9 @@
 import './style.css';
 import Fetch from './display.js';
-
-// declare HTML element to hold the meals displa
+import './modules/views/meal-show.js'
+import showPopup, { resetData } from './modules/views/meal-show';
+import { closeBtn, popupBox } from './modules/dom-elements';
+// declare HTML element to hold the meals display
 const mealsRow = document.querySelector('.meals-row');
 
 // get all categories to add event listeners
@@ -56,3 +58,14 @@ categories.forEach((category) => {
 
 // displaying meals on the page by default
 displayMeals();
+
+mealsRow.addEventListener('click',(evt)=>{
+   const elmt=evt.target;
+   if(!elmt.classList.contains('comment-btn')) return;
+   showPopup(elmt.getAttribute('id'));
+});
+
+closeBtn.addEventListener('click',()=>{
+  resetData();
+  popupBox.classList.toggle('d-none')
+});

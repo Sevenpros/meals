@@ -7,7 +7,7 @@
     <title>Meals homepage</title>
 </head>
 <body>
-<header class="d-flex-lg justify-between-lg p-1-lg">
+<header class="d-flex-lg justify-between-lg p-1-lg ">
     <div class="logo">
         logo
     </div>
@@ -22,13 +22,65 @@
     </nav>
 </header>
 <main>
-    <section class="meals-section">
+    <section class="meals-section blur">
         <article class="meals-row">
           
         </article>
     </section>
-    <!-- <div id="popup">
-    </div> -->
+    <div id="details-popup" class="d-none">
+        <div class="food-container">
+            <button class="close-btn">
+                X
+            </button>
+            <div class="food-image">
+                <img src="" alt="">
+            </div>
+            <div class="food-details">
+                <h2 class="grid-item-max food-name">Food 3</h2>
+                <div class="description grid-lg">
+                    <div class="description-item">
+                        <div class="item-text">Category &nbsp;</div>
+                        <div class="item-text item-category">category</div>
+                    </div>
+                    <div class="description-item">
+                        <div class="item-text">Area &nbsp;</div>
+                        <div class="item-text area">Area</div>
+                    </div>
+                    <div class="description-item">
+                        <div class="item-text">Ingredients List &nbsp;</div>
+                        <div class="item-text ingredient-list"></div>
+                    </div>
+                    <div class="description-item">
+                        <div class="item-text">Tag List &nbsp;</div>
+                        <div class="item-text tag-list">tag list</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comments">
+            <h2>Comments(counts)</h2>
+            <div class="comment d-flex-lg justify-center-lg">
+                <div class="date">date</div>
+                <div class="comment-author">author name</div>
+                <div class="comment-body">
+                    This is my comment
+                </div>
+            </div>
+            <form action="#" method="post" class="form d-flex-lg flex-column-lg align-left justify-start">
+                <div class="form-group">
+                    <label for="author"></label>
+                    <input type="text" name="author" id="author" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="insight"></label>
+                    <textarea name="insight" id="insight" rows="3" cols="30" placeholder="Insight"></textarea>
+                </div>
+                <div class="form-group text-end w-100">
+                    <button type="submit">Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </main>
 <footer>
     <div class="footer p-1-lg">
