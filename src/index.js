@@ -1,6 +1,8 @@
 import './style.css';
 import Fetch from './display.js';
 
+const mealsList = new Fetch();
+
 // declare HTML element to hold the meals displa
 const mealsRow = document.querySelector('.meals-row');
 
@@ -9,12 +11,10 @@ const categories = document.querySelectorAll('.category');
 
 const showLikes = async (id) => {
   let likes = 0;
-  const mealLikes = await Fetch.getLikes();
-  await mealLikes.forEach((meal) => {
-    if (meal.item_id === id) {
-      likes = meal.likes;
-    }
-  });
+  const mealLikes = new Fetch();
+  const meals = await mealLikes.getLikes();
+  const currentItem = meals.find((meal) => meal.item_id === id);
+  if (currentItem) likes = currentItem.likes;
   return likes;
 };
 
@@ -53,15 +53,14 @@ const mapCard = (meals) => {
 
 // default function to display the cards on the page (called when a page loads)
 const displayMeals = async () => {
-  const mealsList = await Fetch.displayMeals();
-  const { meals } = await mealsList;
+  const { meals } = await mealsList.showMeals();
   mapCard(meals);
 };
 
 // add eventlistnener on categories when a specific category is clicked.
 categories.forEach((category) => {
   category.addEventListener('click', () => {
-    Fetch.displayMeals(category.textContent).then((cat) => {
+    mealsList.showMeals(category.textContent).then((cat) => {
       const { meals } = cat;
       mapCard(meals);
     });
@@ -72,7 +71,7 @@ const itemsCounter = () => {
   categories.forEach((category) => {
     const id = category.textContent;
     const thisLink = document.querySelector(`#${id}`);
-    Fetch.displayMeals(id).then((cat) => {
+    mealsList.showMeals(id).then((cat) => {
       const { meals } = cat;
       thisLink.textContent = `(${meals.length})`;
     });
@@ -87,7 +86,7 @@ mealsRow.addEventListener('click', (e) => {
       item_id: icon.id,
     };
 
-    Fetch.addLike(meal).then((m) => m);
+    mealsList.addLike(meal).then((m) => m);
     showLikes(icon.id).then((like) => {
       likes.innerHTML = like + 1;
     });
