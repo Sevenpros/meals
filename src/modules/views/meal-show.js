@@ -17,7 +17,7 @@ const displayIngredients = (meal = []) => {
 const setText = (element, value = '') => {
   element.innerHTML = value;
 };
-const setImage = (element, value = '', altText = '') => {
+const setImage = (element, value = './', altText = '') => {
   element.innerHTML = `<img src='${value}' class="meal-image" alt="${altText}">`;
 };
 const displayData = (meal) => {
