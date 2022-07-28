@@ -8,13 +8,13 @@ const showComment = (item) => ` <div class="comment d-flex-lg justify-center-lg"
                     ${item.comment}
                 </div>
             </div>`;
-
+export const commentCounter = (comments) => comments.length;
 const displayComments = (comments) => {
   let content = '';
   comments.forEach((comment) => {
     content += showComment(comment);
   });
-  setText(commentCounterBox, ` (${comments.length})`);
+  setText(commentCounterBox, ` (${commentCounter(comments)})`);
   setText(commentListBox, content);
 };
 
