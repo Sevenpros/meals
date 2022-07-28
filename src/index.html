@@ -13,12 +13,12 @@
     <title>Meals homepage</title>
 </head>
 <body>
-<header class="d-flex-lg justify-between-lg p-1-lg">
-    <div class="logo">
+<header class="d-flex justify-content-around">
+    <div class="logo  flex-fill">
         logo
     </div>
-    <nav>
-        <ul class="d-flex-lg">
+    <nav class="flex-fill">
+        <ul class="d-flex justify-content-around">
             <li><a href="#" class="p-1-lg">Home</a></li>
             <li><a href="#" class="p-1-lg">About</a></li>
             <li><a href="#" class="p-1-lg">Recipes</a></li>
@@ -28,62 +28,72 @@
     </nav>
 </header>
 <main>
-    <div id="details-popup">
-        <div class="food-container">
-            <div class="food-image">
-                <img src="" alt="">
-            </div>
-            <div class="food-details">
-                <h2 class="grid-item-max food-name">Food 3</h2>
-                <div class="description grid-lg">
-                    <div class="description-item">
-                        <div class="item-text">Category</div>
-                        <div class="item-text category">category</div>
-                    </div>
-                    <div class="description-item">
-                        <div class="item-text">Area</div>
-                        <div class="item-text area">Area</div>
-                    </div>
-                    <!--                    <div class="description-item">-->
-                    <!--                        <div class="item-text">Dish Name</div>-->
-                    <!--                        <div class="item-text dish-name">Dish Name</div>-->
-                    <!--                    </div>-->
-                    <div class="description-item">
-                        <div class="item-text">Ingredients List</div>
-                        <div class="item-text ingredient-list"></div>
-                    </div>
-                    <div class="description-item">
-                        <div class="item-text">Tag List</div>
-                        <div class="item-text tag-list">tag list</div>
+    <div id="details-popup ">
+        <div class="container py-4 mt-5 border">
+            <div class="food-container">
+                <div class="food-image text-center">
+                    <img src="" alt="">
+                </div>
+                <div class="food-details">
+                    <h2 class="grid-item-max food-name my-5">Food 3</h2>
+                    <div class="description row ">
+                        <div class="row col-md-5">
+                            <div class="description-item col-md-4">
+                                <div class="item-text">Category</div>
+                                <div class="item-text category">category</div>
+                            </div>
+                            <div class="description-item col-md-4">
+                                <div class="item-text">Area</div>
+                                <div class="item-text area">Area</div>
+                            </div>
+                            <div class="description-item col-md-4">
+                                <div class="item-text">Tag List</div>
+                                <div class="item-text tag-list">tag list</div>
+                            </div>
+                            <div class="description-item col-md-12">
+                                <div class="item-text">Ingredients List</div>
+                                <div class="item-text ingredient-list text-dark"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 description-item ">
+                            <div class="item-text ">Instructions</div>
+                            <div class="item-text instruction text-dark "></div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="comments ">
+                <h2 class="my-4">Comments<span class="comment-counter">(counts)</span></h2>
+                <div class="row">
+                    <div class="col-md-5">
+                        <form action="#" method="post" class="form">
+                            <div class="form-group ">
+                                <label for="author"></label>
+                                <input type="text" name="author" id="author" class="form-control w-75" placeholder="Name" required>
+                            </div>
+                            <div class="form-group mb-4 mt-1">
+                                <label for="insight"></label>
+                                <textarea name="insight" id="insight" rows="3" class="form-control w-75"  placeholder="Insight" required></textarea>
+                            </div>
+                            <div class="form-group  w-100">
+                                <button type="submit" class="btn btn-danger">Comment</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="comment-list pl-0 col-md-7 ">
+                        <div class="comment d-flex-lg justify-content-space-between">
+                            <div class="date ">date</div>
+                            <div class="comment-author mx-2">author name</div>
+                            <div class="comment-body">
+                                This is my comment
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="comments">
-            <h2>Comments<span class="comment-counter">(counts)</span></h2>
-            <div class="comment-list">
-                <div class="comment d-flex-lg justify-center-lg">
-                    <div class="date">date</div>
-                    <div class="comment-author">author name</div>
-                    <div class="comment-body">
-                        This is my comment
-                    </div>
-                </div>
-            </div>
-            <form action="#" method="post" class="form d-flex-lg flex-column-lg align-left justify-start">
-                <div class="form-group">
-                    <label for="author"></label>
-                    <input type="text" name="author" id="author" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="insight"></label>
-                    <textarea name="insight" id="insight" rows="3" cols="30" placeholder="Insight" required></textarea>
-                </div>
-                <div class="form-group text-end w-100">
-                    <button type="submit">Comment</button>
-                </div>
-            </form>
-        </div>
+
     </div>
 </main>
 <footer>
