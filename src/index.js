@@ -1,8 +1,9 @@
 import './style.css';
 import Fetch from './display.js';
-import './modules/views/meal-show.js'
-import showPopup, { resetData } from './modules/views/meal-show';
-import { closeBtn, popupBox } from './modules/dom-elements';
+import showPopup, { resetData } from './modules/views/meal-show.js';
+import {
+  closeBtn, popupBox,
+} from './modules/dom-elements.js';
 // declare HTML element to hold the meals display
 const mealsRow = document.querySelector('.meals-row');
 
@@ -59,13 +60,13 @@ categories.forEach((category) => {
 // displaying meals on the page by default
 displayMeals();
 
-mealsRow.addEventListener('click',(evt)=>{
-   const elmt=evt.target;
-   if(!elmt.classList.contains('comment-btn')) return;
-   showPopup(elmt.getAttribute('id'));
+mealsRow.addEventListener('click', (evt) => {
+  const elmt = evt.target;
+  if (!elmt.classList.contains('comment-btn')) return;
+  showPopup(elmt.getAttribute('id'));
 });
 
-closeBtn.addEventListener('click',()=>{
+closeBtn.addEventListener('click', () => {
   resetData();
-  popupBox.classList.toggle('d-none')
+  popupBox.classList.toggle('d-none');
 });
