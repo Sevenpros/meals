@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #f9f9f9;
+  font-family: 'Cormorant SC', serif;
+  transition: all 2s ease-in-out;
 }
 
 li {
@@ -41,33 +44,9 @@ img {
   font-weight: lighter;
 }
 
-.meals-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 32px 24px;
-}
-
 .blur {
   filter: blur(8px);
   -webkit-filter: blur(8px);
-}
-
-.meal-card {
-  width: 200px;
-  flex-grow: 0;
-}
-
-.meal-desc {
-  display: flex;
-  justify-content: space-between;
-  gap: 1vw;
-}
-
-.meal-likes {
-  display: flex;
-  gap: 0.3vw;
 }
 
 .text-end {
@@ -84,6 +63,11 @@ img {
   top: 10px;
   left: 0;
   right: 0;
+}
+
+#details-popup > .container {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 1rem;
 }
 
 .comment > * {
@@ -112,13 +96,16 @@ img {
 }
 
 .close-btn {
-  padding: 1rem;
-  background-color: #800;
+  padding: 1rem 1.5rem;
+  background-color: #e75b1e;
   color: #fff;
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: fixed;
+  right: 3rem;
+  top: 2rem;
   z-index: 1000;
+  border: none;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 
 .badge {
@@ -137,21 +124,43 @@ img {
 .item-count {
   padding: 0.5rem;
   border-radius: 100px;
-  background-color: #e75b1e;
-  color: #fff;
+  border: 1px solid #e75b1e;
+  color: #e75b1e;
 }
 
 .logo {
+  font-size: 1.8rem;
+}
+
+.logo,
+.grow-1 {
   flex-grow: 1;
 }
 
-.comment-btn {
-  background-color: #e75b1e;
-  color: #fff;
-  border: none;
+.comment-btn,
+.like-icon,
+.reserv-btn {
+  border: 1px solid #e75b1e;
+  color: #e75b1e;
 }
 
-.reserv-btn {
-  background-color: #c5c5c5;
-  color: #000;
+.active {
+  background-color: #d2d2d2;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding-right: 3rem;
+  justify-content: space-between;
+}
+
+.like-number {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px;
+  border-radius: 100px;
+  background-color: rgba(231, 91, 30, 0.8);
+  color: #fff;
 }
