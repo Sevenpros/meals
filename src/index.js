@@ -1,9 +1,15 @@
 import './style.css';
 import Fetch from './display.js';
-import showPopup, { resetData } from './modules/views/meal-show.js';
+import { resetData, showPopup } from './modules/views/meal-show.js';
 import {
   closeBtn, popupBox,
-} from './modules/dom-elements.js';
+} from './modules/views/meal-dom-elements.js';
+import './modules/views/meal-show.js';
+import { form } from './modules/views/comment-dom-elements.js';
+import addComment from './modules/comments/add.js';
+import comments from './modules/comments/index.js';
+import setComment from './modules/views/comment-show.js';
+import { commentContainer } from './modules/views/comment-dom-elements';
 // declare HTML element to hold the meals display
 const mealsRow = document.querySelector('.meals-row');
 
@@ -29,8 +35,8 @@ const mapCard = (meals) => {
                     </div>
                 </div>
                 <div class="meal-action">
-                    <button class="btn comment-btn" id="${meal.idMeal}">Comments</button>
-                    <button class="btn reserv-btn" id="${meal.idMeal}">Reservations</button>
+                    <button class="btn btn-sm btn-dark comment-btn" id="${meal.idMeal}">Comments</button>
+                    <button class="btn btn-sm btn-dark reserv-btn" id="${meal.idMeal}">Reservations</button>
                 </div>
         `;
 
@@ -51,7 +57,7 @@ categories.forEach((category) => {
   category.addEventListener('click', (e) => {
     const category = e.target.textContent;
     Fetch.displayMeals(category).then((cat) => {
-      const { meals } = cat;
+      const {meals} = cat;
       mapCard(meals);
     });
   });
@@ -60,13 +66,33 @@ categories.forEach((category) => {
 // displaying meals on the page by default
 displayMeals();
 
-mealsRow.addEventListener('click', (evt) => {
-  const elmt = evt.target;
-  if (!elmt.classList.contains('comment-btn')) return;
-  showPopup(elmt.getAttribute('id'));
-});
-
 closeBtn.addEventListener('click', () => {
   resetData();
   popupBox.classList.toggle('d-none');
+});
+
+mealsRow.addEventListener('click', (evt) => {
+  const elmt = evt.target;
+  if (!elmt.classList.contains('comment-btn')) return;
+  const id = elmt.getAttribute('id');
+  showPopup(id);
+  comments(id).then((data) => setComment(data));
+  form.item_id.value = id;
+
+});
+
+
+form.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  const author = form.author.value;
+  const insight = form.insight.value;
+  addComment(form.item_id.value, author, insight).then(() => {
+    // will add code for displaying feedback Message
+  });
+  const clearFormFields = (form) => {
+    Object.keys(form).forEach((key, index) => {
+      if (index < 2) form[key].value = '';
+    });
+  };
+  clearFormFields(form);
 });

@@ -11,9 +11,9 @@
             crossorigin="anonymous"
     />
     <title>Meals homepage</title>
-</head>
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body>
-<header class="d-flex justify-content-around header">
+<header class="d-flex justify-content-around">
     <div class="logo  flex-fill">
         logo
     </div>
@@ -28,17 +28,17 @@
     </nav>
 </header>
 <main>
-    <section class="meals-section ">
+    <section class="meals-section blur">
         <article class="meals-row">
 
         </article>
     </section>
-    <div id="details-popup" class="d-none">
-        <div class="container border border-dark py-5 mt-5 border bg-white">
-            <button type="button" class="close-btn">
-                X
-            </button>
+    <div id="details-popup d-none">
+        <div class="container py-4 mt-5 border">
             <div class="food-container">
+                <button type="button" class="close-btn">
+                    X
+                </button>
                 <div class="food-image text-center">
                     <img src="./" alt="Meal Image">
                 </div>
@@ -48,7 +48,7 @@
                         <div class="row col-md-5">
                             <div class="description-item col-md-4">
                                 <div class="item-text">Category</div>
-                                <div class="item-text item-category">category</div>
+                                <div class="item-text category">category</div>
                             </div>
                             <div class="description-item col-md-4">
                                 <div class="item-text">Area</div>
@@ -71,10 +71,10 @@
                 </div>
             </div>
             <div class="comments ">
-                <h2 class="my-4 mx-0 px-0">Comments<span class="comment-counter">(0)</span></h2>
+                <h2 class="my-4">Comments<span class="comment-counter">(counts)</span></h2>
                 <div class="row">
                     <div class="col-md-5">
-                        <form action="#" method="post" class="form" >
+                        <form action="#" method="post" class="form">
                             <div class="form-group ">
                                 <label for="author"></label>
                                 <input type="text" name="author" id="author" class="form-control w-75"
@@ -85,14 +85,18 @@
                                 <textarea name="insight" id="insight" rows="3" class="form-control w-75"
                                           placeholder="Insight" required></textarea>
                             </div>
-                            <input type="hidden" name="item_id" id="item_id" value="0">
-                            <div class="form-group text-start">
+                            <div class="form-group  w-100">
                                 <button type="submit" class="btn btn-danger">Comment</button>
                             </div>
                         </form>
                     </div>
                     <div class="comment-list pl-0 col-md-7 ">
                         <div class="comment d-flex-lg justify-content-space-between">
+                            <div class="date ">date</div>
+                            <div class="comment-author mx-2">author name</div>
+                            <div class="comment-body">
+                                This is my comment
+                            </div>
                         </div>
                     </div>
                 </div>
