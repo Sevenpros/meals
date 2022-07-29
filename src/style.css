@@ -144,3 +144,14 @@ img {
 .logo {
   flex-grow: 1;
 }
+
+.comment-btn {
+  background-color: #e75b1e;
+  color: #fff;
+  border: none;
+}
+
+.reserv-btn {
+  background-color: #c5c5c5;
+  color: #000;
+}

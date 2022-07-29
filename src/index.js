@@ -36,20 +36,24 @@ const mapCard = (meals) => {
     // creating div element to hold one(1) meal info
 
     const mealCard = document.createElement('div');
-    mealCard.classList.add('meal-card');
+    mealCard.classList.add('meal-card', 'card', 'p-2', 'shadow-sm');
     mealCard.innerHTML = `
         <div class="meal-img"><img alt="${meal.strMeal}" src="${meal.strMealThumb}"></div>
                 <div class="meal-desc">
                     <span class="meal-name">${meal.strMeal}</span>
-                    <div class="meal-likes" id="${meal.idMeal}">
-                    <span class="like-number">${likes}</span>
-                    <a href="#" class="fa fa-thumbs-up like-icon" id="${meal.idMeal}"></a>
-                        
+                    <div class="meal-likes" id="${meal.idMeal}">      
                     </div>
                 </div>
-                <div class="meal-action">
-                    <button class="btn btn-sm btn-dark comment-btn" id="${meal.idMeal}">Comments</button>
-                    <button class="btn btn-sm btn-dark reserv-btn" id="${meal.idMeal}">Reservations</button>
+                <div class="meal-action d-flex justify-content-between">
+                 <div class="icon">
+                        <span class="like-number">${likes}</span>
+                    <a href="#" class="fa fa-thumbs-up like-icon" id="${meal.idMeal}"></a>
+</div>
+                <div>
+           <button class="btn btn-sm comment-btn" id="${meal.idMeal}"><span class="fa fa-comment"></span></button>
+                    <button class="btn btn-sm reserv-btn" id="${meal.idMeal}"><span class="fa fa-book"></span></button>      
+</div>
+                   
                 </div>
         `;
 
