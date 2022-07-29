@@ -4,12 +4,11 @@ import { resetData, showPopup } from './modules/views/meal-show.js';
 import {
   closeBtn, popupBox,
 } from './modules/views/meal-dom-elements.js';
-import './modules/views/meal-show.js';
 import { form } from './modules/views/comment-dom-elements.js';
 import addComment from './modules/comments/add.js';
 import comments from './modules/comments/index.js';
 import setComment from './modules/views/comment-show.js';
-import { commentContainer } from './modules/views/comment-dom-elements';
+
 // declare HTML element to hold the meals display
 const mealsRow = document.querySelector('.meals-row');
 
@@ -57,7 +56,7 @@ categories.forEach((category) => {
   category.addEventListener('click', (e) => {
     const category = e.target.textContent;
     Fetch.displayMeals(category).then((cat) => {
-      const {meals} = cat;
+      const { meals } = cat;
       mapCard(meals);
     });
   });
@@ -78,10 +77,7 @@ mealsRow.addEventListener('click', (evt) => {
   showPopup(id);
   comments(id).then((data) => setComment(data));
   form.item_id.value = id;
-
 });
-
-
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   const author = form.author.value;

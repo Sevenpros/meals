@@ -1,18 +1,21 @@
 import {
-  areaBox, categoryBox, foodImageBox, foodNameBox, ingredientListBox, tagListBox, popupBox, instruction,
+  areaBox,
+  categoryBox,
+  foodImageBox,
+  foodNameBox,
+  ingredientListBox,
+  tagListBox,
+  popupBox,
+  instruction,
 } from './meal-dom-elements.js';
 import getMeal from '../meals/show.js';
-import { setText, toggleBlur } from '../global-value';
-import { header, mealsSection } from './meal-dom-elements';
-
+import { setText, toggleBlur } from '../global-value.js';
 
 const setIngredients = (meal = []) => {
-  let index = 1;
-  Object.keys(meal).forEach((props) => {
+  Object.keys(meal).forEach((props, index) => {
     if (props.startsWith('strIngredient')) {
-      const measure = meal[`strMeasure${index}`];
+      const measure = meal[`strMeasure${(index + 1)}`];
       ingredientListBox.innerHTML += meal[props] ? `<span class='badge  badge-pill shadow-sm'>${meal[props]}(${measure})</span>` : '';
-      index += 1;
     }
   });
 };

@@ -1,4 +1,4 @@
-import { header, mealsSection } from './views/meal-dom-elements';
+import { header, mealsSection } from './views/meal-dom-elements.js';
 
 const appID = 'Kw76R2UqPqv86GuooSFn';
 export default appID;
