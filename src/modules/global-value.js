@@ -11,3 +11,10 @@ export function toggleBlur() {
   mealsSection.classList.toggle('blur');
   header.classList.toggle('blur');
 }
+
+export const showOnSuccess = (element) => {
+  element.classList.remove('d-none');
+  setTimeout(() => {
+    element.classList.add('d-none');
+  }, 3500);
+};
