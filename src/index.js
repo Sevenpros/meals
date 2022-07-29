@@ -19,8 +19,7 @@ const categories = document.querySelectorAll('.category');
 
 const showLikes = async (id) => {
   let likes = 0;
-  const mealLikes = new Fetch();
-  const meals = await mealLikes.getLikes();
+  const meals = await mealsList.getLikes();
   const currentItem = meals.find((meal) => meal.item_id === id);
   if (currentItem) likes = currentItem.likes;
   return likes;
