@@ -12,27 +12,29 @@
     />
     <title>Meals homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-<header class="d-flex justify-content-around header">
-    <div class="logo  flex-fill">
-        logo
+<header class="header shadow-sm ">
+    <div class="container d-flex pt-3">
+        <div class="logo">
+            Kigali-Eat
+        </div>
+        <nav>
+            <ul class="justify-content-between d-flex">
+                <li><a href="#" class="px-2 category link-item  ">Beef</a><span class="item-count rounded-circle" id='Beef'></span></li>
+                <li><a href="#" class="px-2 category link-item ">Chicken</a><span class="item-count rounded-circle" id='Chicken'></span></li>
+                <li><a href="#" class="px-2 category link-item ">Seafood</a><span class="item-count rounded-circle" id='Seafood'></span></li>
+                <li><a href="#" class="px-2 category link-item ">Goat</a><span class="item-count rounded-circle" id='Goat'></span></li>
+                <li><a href="#" class="px-2 category link-item ">Breakfast</a><span class="item-count rounded-circle" id='Breakfast'></span></li>
+            </ul>
+        </nav>
     </div>
 
-    <nav>
-        <ul class="d-flex-lg">
-            <li><a href="#" class="p-1-lg category">Beef</a><span id='Beef'></span></li>
-            <li><a href="#" class="p-1-lg category">Chicken</a><span id='Chicken'></span></li>
-            <li><a href="#" class="p-1-lg category">Seafood</a><span id='Seafood'></span></li>
-            <li><a href="#" class="p-1-lg category">Goat</a><span id='Goat'></span></li>
-            <li><a href="#" class="p-1-lg category">Breakfast</a><span id='Breakfast'></span></li>
-        </ul>
-    </nav>
 </header>
 <main>
-    <section class="meals-section ">
-        <article class="meals-row">
+    <section class="meals-section">
+        <article class="meals-row container shadow-lg p-4 mt-5">
 
         </article>
     </section>
@@ -50,16 +52,16 @@
                     <div class="description row ">
                         <div class="row col-md-5">
                             <div class="description-item col-md-4">
-                                <div class="item-text">Category</div>
-                                <div class="item-text item-category">category</div>
+                                <div class="item-text">category link-item nav-link</div>
+                                <div class="item-text item-category link-item nav-link">category link-item nav-link</div>
                             </div>
                             <div class="description-item col-md-4">
                                 <div class="item-text">Area</div>
                                 <div class="item-text area">Area</div>
                             </div>
-                            <div class="description-item col-md-4">
+                            <div class="description-item col-md-12">
                                 <div class="item-text">Tag List</div>
-                                <div class="item-text tag-list">tag list</div>
+                                <div class="item-text tag-list d-block">tag list</div>
                             </div>
                             <div class="description-item col-md-12">
                                 <div class="item-text">Ingredients List</div>
@@ -90,7 +92,7 @@
                             </div>
                             <input type="hidden" name="item_id" id="item_id" value="0">
                             <div class="form-group text-start">
-                                <button type="submit" class="btn btn-danger">Comment</button>
+                                <button type="submit" class="btn btn-sm btn-danger">Comment</button>
                             </div>
                         </form>
                     </div>
@@ -105,7 +107,7 @@
     </div>
 </main>
 <footer>
-    <div class="footer p-1-lg">
+    <div class="footer px-2">
         Create by Microverse under CC licence
     </div>
 </footer>

@@ -21,11 +21,24 @@ img {
   font-weight: bolder;
   margin-bottom: 1rem;
   margin-top: 2rem;
+  color: #7f7f7f;
 }
 
 .item-text:nth-child(2) {
+  font-weight: bold;
+  color: #e75b1e;
+}
+
+.text-custom-color {
+  color: #e75b1e;
+}
+
+.instruction.item-text:nth-child(2) {
   font-weight: lighter;
-  color: rgb(220, 53, 69);
+}
+
+.comments > h2 {
+  font-weight: lighter;
 }
 
 .meals-row {
@@ -57,28 +70,8 @@ img {
   gap: 0.3vw;
 }
 
-.grid-lg {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-}
-
-.description-item {
-  border: 1px solid rgba(68, 68, 68, 0.33);
-  display: flex;
-  align-content: center;
-  margin: 1rem;
-}
-
 .text-end {
   text-align: end;
-}
-
-.form-group {
-  margin: 1rem auto;
-}
-
-.flex-column-lg {
-  flex-direction: column;
 }
 
 #details-popup {
@@ -114,6 +107,8 @@ img {
 .food-image {
   width: 50%;
   margin: auto;
+  border: 0.5px solid rgba(231, 91, 30, 0.51);
+  border-radius: 3px;
 }
 
 .close-btn {
@@ -132,4 +127,31 @@ img {
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: normal;
+}
+
+.link-item {
+  text-decoration: none;
+  color: #7f7f7f;
+}
+
+.item-count {
+  padding: 0.5rem;
+  border-radius: 100px;
+  background-color: #e75b1e;
+  color: #fff;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.comment-btn {
+  background-color: #e75b1e;
+  color: #fff;
+  border: none;
+}
+
+.reserv-btn {
+  background-color: #c5c5c5;
+  color: #000;
 }
