@@ -3,7 +3,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #f9f9f9;
-  font-family: 'Cormorant SC', serif;
   transition: all 2s ease-in-out;
 }
 

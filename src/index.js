@@ -4,10 +4,11 @@ import { resetData, showPopup } from './modules/views/meal-show.js';
 import {
   closeBtn, popupBox,
 } from './modules/views/meal-dom-elements.js';
-import { form } from './modules/views/comment-dom-elements.js';
+import { form, feedbackBox } from './modules/views/comment-dom-elements.js';
 import addComment from './modules/comments/add.js';
 import comments from './modules/comments/index.js';
 import setComment from './modules/views/comment-show.js';
+import { setText, showOnSuccess } from './modules/global-value.js';
 
 // declare HTML element to hold the meals display
 const mealsRow = document.querySelector('.meals-row');
@@ -124,13 +125,16 @@ form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   const author = form.author.value;
   const insight = form.insight.value;
-  addComment(form.item_id.value, author, insight).then(() => {
-    // will add code for displaying feedback Message
-  });
+  const itemID = form.item_id.value;
   const clearFormFields = (form) => {
     Object.keys(form).forEach((key, index) => {
       if (index < 2) form[key].value = '';
     });
   };
-  clearFormFields(form);
+  addComment(itemID, author, insight).then(() => {
+    setText(feedbackBox, 'Thank you for your comment');
+    showOnSuccess(feedbackBox);
+    clearFormFields(form);
+    comments(itemID).then((data) => setComment(data));
+  });
 });
