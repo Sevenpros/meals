@@ -80,7 +80,7 @@ const itemsCounter = () => {
     const thisLink = document.querySelector(`#${id}`);
     mealsList.showMeals(id).then((cat) => {
       const { meals } = cat;
-      thisLink.textContent = `(${meals.length})`;
+      thisLink.textContent = `${meals.length < 10 ? `0${meals.length}` : meals.length}`;
     });
   });
 };
