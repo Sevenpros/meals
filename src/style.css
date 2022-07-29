@@ -17,27 +17,15 @@ img {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
+.item-text:nth-child(1) {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
-.d-flex-lg {
-  display: flex;
-  gap: 1em;
-}
-
-.justify-center-lg {
-  justify-content: center;
-}
-
-.justify-between-lg {
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 32px;
-}
-
-.grow-1-lg {
-  flex-grow: 1;
+.item-text:nth-child(2) {
+  font-weight: lighter;
+  color: rgb(220, 53, 69);
 }
 
 .meals-row {
@@ -46,6 +34,11 @@ a {
   flex-wrap: wrap;
   gap: 12px;
   padding: 32px 24px;
+}
+
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
 .meal-card {
@@ -92,30 +85,16 @@ a {
   width: 90%;
   min-height: 98vh;
   margin: auto;
-  border: 1px solid #000;
   text-align: center;
   z-index: 1000;
   position: absolute;
   top: 10px;
   left: 0;
   right: 0;
-  background-color: #fff;
 }
 
 .comment > * {
   padding: 0 1rem;
-}
-
-.comments,
-.form {
-  width: 60%;
-  margin: 2rem auto;
-}
-
-.food-image {
-  height: 500px;
-  background-color: black;
-  position: relative;
 }
 
 .meal-image {
@@ -129,6 +108,12 @@ a {
 
 .food-container {
   position: relative;
+  text-align: left;
+}
+
+.food-image {
+  width: 50%;
+  margin: auto;
 }
 
 .close-btn {
@@ -141,6 +126,10 @@ a {
   z-index: 1000;
 }
 
-.item-text:nth-child(2) {
-  font-weight: bold;
+.badge {
+  color: inherit;
+  background-color: #f0f0f0;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
 }

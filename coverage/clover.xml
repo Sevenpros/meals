@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1659079782009" clover="3.2.0">
+  <project timestamp="1659079782009" name="All files">
+    <metrics statements="28" coveredstatements="20" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="1" elements="35" coveredelements="21" complexity="0" loc="28" ncloc="28" packages="2" files="4" classes="4"/>
+    <package name="modules">
+      <metrics statements="6" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="global-value.js" path="/var/www/lara2019/microverse/ushindi/module 2/seth/meals/src/modules/global-value.js">
+        <metrics statements="6" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="modules.views">
+      <metrics statements="22" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <file name="comment-dom-elements.js" path="/var/www/lara2019/microverse/ushindi/module 2/seth/meals/src/modules/views/comment-dom-elements.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="comment-show.js" path="/var/www/lara2019/microverse/ushindi/module 2/seth/meals/src/modules/views/comment-show.js">
+        <metrics statements="8" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="meal-dom-elements.js" path="/var/www/lara2019/microverse/ushindi/module 2/seth/meals/src/modules/views/meal-dom-elements.js">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

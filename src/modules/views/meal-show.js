@@ -1,32 +1,37 @@
 import {
-  areaBox, categoryBox, foodImageBox, foodNameBox, ingredientListBox, tagListBox, popupBox,
-} from '../dom-elements.js';
+  areaBox,
+  categoryBox,
+  foodImageBox,
+  foodNameBox,
+  ingredientListBox,
+  tagListBox,
+  popupBox,
+  instruction,
+} from './meal-dom-elements.js';
 import getMeal from '../meals/show.js';
+import { setText, toggleBlur } from '../global-value.js';
 
-const displayIngredients = (meal = []) => {
-  let index = 1;
-  Object.keys(meal).forEach((props) => {
+const setIngredients = (meal = []) => {
+  Object.keys(meal).forEach((props, index) => {
     if (props.startsWith('strIngredient')) {
-      const measure = meal[`strMeasure${index}`];
-      ingredientListBox.innerHTML += meal[props] ? `<span>${meal[props]}(${measure})</span>` : '';
-      index += 1;
+      const measure = meal[`strMeasure${(index + 1)}`];
+      ingredientListBox.innerHTML += meal[props] ? `<span class='badge  badge-pill shadow-sm'>${meal[props]}(${measure})</span>` : '';
     }
   });
 };
 
-const setText = (element, value = '') => {
-  element.innerHTML = value;
+const setImage = (container, value = './', altText = '') => {
+  container.innerHTML = `<img src='${value}' class="meal-image" alt="${altText}">`;
 };
-const setImage = (element, value = './', altText = '') => {
-  element.innerHTML = `<img src='${value}' class="meal-image" alt="${altText}">`;
-};
-const displayData = (meal) => {
+
+const setData = (meal) => {
   setImage(foodImageBox, meal.strMealThumb, meal.strMeal);
   setText(foodNameBox, meal.strMeal);
   setText(categoryBox, meal.strCategory);
   setText(areaBox, meal.strArea);
   setText(tagListBox, meal.strTags);
-  displayIngredients(meal);
+  setText(instruction, meal.strInstructions);
+  setIngredients(meal);
 };
 
 export const resetData = () => {
@@ -35,13 +40,15 @@ export const resetData = () => {
   setText(categoryBox);
   setText(areaBox);
   setText(tagListBox);
-  displayIngredients();
-};
-const showPopup = (id) => {
-  getMeal(id).then((meal) => {
-    displayData(meal);
-  });
-  popupBox.classList.toggle('d-none');
+  setText(instruction);
+  setIngredients();
+  toggleBlur();
 };
 
-export default showPopup;
+export const showPopup = (id) => {
+  getMeal(id).then((meal) => {
+    setData(meal);
+  });
+  toggleBlur();
+  popupBox.classList.toggle('d-none');
+};
