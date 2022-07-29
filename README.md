@@ -1,62 +1,59 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
-
-> Description the project.
-
-
+# MEALS
+ In this project using API different kind of foods with pictures and description are displayed on the page, the interface will let the user navigate through different kind of foods by click to a particlular category. also a user can like or comment on a specific meal.
+ 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JAVASCRIPT, HTML & CSS
+- WEBPACK
+- BOOTSTRAP
 
-## Live Demo (if available)
+## Live Demo 
 
-[Live Demo Link](https://livedemo.com)
-
+[Watch video presentation here](https://drive.google.com/file/d/1hxelhbT25KcMFogp2lpvnNJiN4jVvYxu/view?usp=sharing)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+- Visit my github repo of this project [@githubhandle](https://github.com/Sevenpros/meals);
+- clone the project into you pc.
+- locate the directory where you cloned your prooject
+- install node and npm
+- using terminal write ```npm run start ```  
+- the web app will be open in the your default browser;
+- enjoy 
 
 ### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+- In order to clone the project you need to have a git installed in your computer
+- Node and npm installed
+- To run the project you will need to have a web browser installed on your computer as well.
 
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Seth Bizimana**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Github](https://github.com/Sevenpros)
+- Twitter: [@twitter](https://twitter.com/BizimanaSeth)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/seth-bizimana-2a0624189)
 
-👤 **Author2**
+👤
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Sshindi Bienvenu**
+
+- GitHub: [@Github](https://github.com/bienvenuushindi )
+- Twitter: [@twitter](https://twitter.com/UsbBush)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/ushindi-bienvenu-894b2b141)
+
+👤
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+
 
 ## Show your support
 
@@ -68,6 +65,4 @@ Give a ⭐️ if you like this project!
 - Inspiration
 - etc
 
-## 📝 License
 
-This project is [MIT](./MIT.md) licensed.

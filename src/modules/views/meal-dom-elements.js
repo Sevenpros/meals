@@ -1,0 +1,11 @@
+export const foodImageBox = document.querySelector('.food-image');
+export const foodNameBox = document.querySelector('.food-name');
+export const categoryBox = document.querySelector('.item-category');
+export const areaBox = document.querySelector('.area');
+export const instruction = document.querySelector('.instruction');
+export const ingredientListBox = document.querySelector('.ingredient-list');
+export const tagListBox = document.querySelector('.tag-list');
+export const closeBtn = document.querySelector('.close-btn');
+export const popupBox = document.getElementById('details-popup');
+export const header = document.querySelector('.header');
+export const mealsSection = document.querySelector('.meals-section');

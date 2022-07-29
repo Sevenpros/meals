@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  transition: all 2s ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.item-text:nth-child(1) {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  color: #7f7f7f;
+}
+
+.item-text:nth-child(2) {
+  font-weight: bold;
+  color: #e75b1e;
+}
+
+.text-custom-color {
+  color: #e75b1e;
+}
+
+.instruction.item-text:nth-child(2) {
+  font-weight: lighter;
+}
+
+.comments > h2 {
+  font-weight: lighter;
+}
+
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.text-end {
+  text-align: end;
+}
+
+#details-popup {
+  width: 90%;
+  min-height: 98vh;
+  margin: auto;
+  text-align: center;
+  z-index: 1000;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+}
+
+#details-popup > .container {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 1rem;
+}
+
+.comment > * {
+  padding: 0 1rem;
+}
+
+.meal-image {
+  width: 100%;
+  height: 500px;
+}
+
+.d-none {
+  display: none;
+}
+
+.food-container {
+  position: relative;
+  text-align: left;
+}
+
+.food-image {
+  width: 50%;
+  margin: auto;
+  border: 0.5px solid rgba(231, 91, 30, 0.51);
+  border-radius: 3px;
+}
+
+.close-btn {
+  padding: 1rem 1.5rem;
+  background-color: #e75b1e;
+  color: #fff;
+  position: fixed;
+  right: 3rem;
+  top: 2rem;
+  z-index: 1000;
+  border: none;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.badge {
+  color: inherit;
+  background-color: #f0f0f0;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.link-item {
+  text-decoration: none;
+  color: #7f7f7f;
+}
+
+.item-count {
+  padding: 0.5rem;
+  border-radius: 100px;
+  border: 1px solid #e75b1e;
+  color: #e75b1e;
+}
+
+.logo {
+  font-size: 1.8rem;
+}
+
+.logo,
+.grow-1 {
+  flex-grow: 1;
+}
+
+.comment-btn,
+.like-icon,
+.reserv-btn {
+  border: 1px solid #e75b1e;
+  color: #e75b1e;
+}
+
+.active {
+  background-color: #d2d2d2;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding-right: 3rem;
+  justify-content: space-between;
+}
+
+.like-number {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px;
+  border-radius: 100px;
+  background-color: rgba(231, 91, 30, 0.8);
+  color: #fff;
+}
