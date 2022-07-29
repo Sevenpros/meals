@@ -62,8 +62,8 @@ a {
 .meal-likes {
   display: flex;
   gap: 0.3vw;
-  }
-  
+}
+
 .grid-lg {
   display: grid;
   grid-template-columns: repeat(2, 50%);
