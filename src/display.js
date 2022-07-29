@@ -19,6 +19,10 @@ export default class Fetch {
     });
     return res;
   }
+  async countItems(cat) {
+    const allMeals = await fetch(this.itemUrl + cat);
+    return allMeals.json();
+  }
 
   async getLikes() {
     const likes = await fetch(this.likeUrl);
